@@ -24,6 +24,9 @@ class SearchViewController: UIViewController {
         setupNavigationController()
         setupTableView()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel?.getData()
+    }
     
     // MARK: - Setup
     

@@ -10,4 +10,5 @@ import Foundation
 protocol SearchViewModelProtocol {
     func getNumberOfSections() -> Int
     func getNumberOfRows(in section: Int) -> Int
+    func getData()
 }

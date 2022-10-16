@@ -16,4 +16,15 @@ class SearchViewModel: SearchViewModelProtocol {
     func getNumberOfRows(in section: Int) -> Int {
         return 20
     }
+    
+    func getData() {
+        NetworkManager.fetchMovies { result in
+            switch result {
+            case .success(let data):
+                print("Count films \(data.results.count)")
+            case .failure(let error):
+                print("!!!ERROR: \(error)")
+            }
+        }
+    }
 }
