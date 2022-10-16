@@ -8,22 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		94EA280F28FB505B00E22A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA280E28FB505B00E22A86 /* AppDelegate.swift */; };
-		94EA281128FB505B00E22A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA281028FB505B00E22A86 /* SceneDelegate.swift */; };
-		94EA281328FB505B00E22A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA281228FB505B00E22A86 /* ViewController.swift */; };
-		94EA281628FB505B00E22A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EA281428FB505B00E22A86 /* Main.storyboard */; };
 		94EA281828FB505C00E22A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EA281728FB505C00E22A86 /* Assets.xcassets */; };
 		94EA281B28FB505C00E22A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EA281928FB505C00E22A86 /* LaunchScreen.storyboard */; };
+		94EA283028FBE02100E22A86 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA282E28FBE02100E22A86 /* SearchViewController.swift */; };
+		94EA283128FBE02100E22A86 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EA282F28FBE02100E22A86 /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		94EA280B28FB505B00E22A86 /* KinopoiskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinopoiskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EA280E28FB505B00E22A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94EA281028FB505B00E22A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		94EA281228FB505B00E22A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		94EA281528FB505B00E22A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94EA281728FB505C00E22A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94EA281A28FB505C00E22A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EA281C28FB505C00E22A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94EA282E28FBE02100E22A86 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		94EA282F28FBE02100E22A86 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,86 @@
 		94EA280D28FB505B00E22A86 /* KinopoiskApp */ = {
 			isa = PBXGroup;
 			children = (
-				94EA280E28FB505B00E22A86 /* AppDelegate.swift */,
-				94EA281028FB505B00E22A86 /* SceneDelegate.swift */,
-				94EA281228FB505B00E22A86 /* ViewController.swift */,
-				94EA281428FB505B00E22A86 /* Main.storyboard */,
-				94EA281728FB505C00E22A86 /* Assets.xcassets */,
-				94EA281928FB505C00E22A86 /* LaunchScreen.storyboard */,
-				94EA281C28FB505C00E22A86 /* Info.plist */,
+				94EA282528FBDC7500E22A86 /* Sources */,
+				94EA282228FBDC6100E22A86 /* Resources */,
 			);
 			path = KinopoiskApp;
+			sourceTree = "<group>";
+		};
+		94EA282228FBDC6100E22A86 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94EA281928FB505C00E22A86 /* LaunchScreen.storyboard */,
+				94EA281728FB505C00E22A86 /* Assets.xcassets */,
+				94EA281C28FB505C00E22A86 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		94EA282528FBDC7500E22A86 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				94EA282728FBDC9500E22A86 /* App */,
+				94EA283228FBE75A00E22A86 /* Networking */,
+				94EA282628FBDC9000E22A86 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		94EA282628FBDC9000E22A86 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				94EA282A28FBDCC400E22A86 /* Model */,
+				94EA282928FBDCBF00E22A86 /* Views */,
+				94EA282828FBDCB600E22A86 /* ViewModels */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		94EA282728FBDC9500E22A86 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				94EA280E28FB505B00E22A86 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		94EA282828FBDCB600E22A86 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94EA282928FBDCBF00E22A86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94EA283328FBE7B700E22A86 /* SearchVC */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94EA282A28FBDCC400E22A86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94EA283228FBE75A00E22A86 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		94EA283328FBE7B700E22A86 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				94EA282E28FBE02100E22A86 /* SearchViewController.swift */,
+				94EA282F28FBE02100E22A86 /* SearchViewController.xib */,
+			);
+			path = SearchVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +196,7 @@
 			files = (
 				94EA281B28FB505C00E22A86 /* LaunchScreen.storyboard in Resources */,
 				94EA281828FB505C00E22A86 /* Assets.xcassets in Resources */,
-				94EA281628FB505B00E22A86 /* Main.storyboard in Resources */,
+				94EA283128FBE02100E22A86 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94EA281328FB505B00E22A86 /* ViewController.swift in Sources */,
+				94EA283028FBE02100E22A86 /* SearchViewController.swift in Sources */,
 				94EA280F28FB505B00E22A86 /* AppDelegate.swift in Sources */,
-				94EA281128FB505B00E22A86 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		94EA281428FB505B00E22A86 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94EA281528FB505B00E22A86 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		94EA281928FB505C00E22A86 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +349,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUYZ999FPK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KinopoiskApp/Info.plist;
+				INFOPLIST_FILE = KinopoiskApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +377,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUYZ999FPK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KinopoiskApp/Info.plist;
+				INFOPLIST_FILE = KinopoiskApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
