@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="KinopoiskApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="dYk-cc-S1f" id="ww1-AY-sVx"/>
                 <outlet property="tableView" destination="Xdv-Ge-n5a" id="vjr-CD-ern"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,6 +24,10 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dYk-cc-S1f">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" systemColor="systemGray2Color"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -30,6 +35,8 @@
                 <constraint firstItem="Xdv-Ge-n5a" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3MB-pQ-q5C"/>
                 <constraint firstAttribute="bottom" secondItem="Xdv-Ge-n5a" secondAttribute="bottom" id="9QC-42-oyZ"/>
                 <constraint firstItem="Xdv-Ge-n5a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="I3M-qv-yq7"/>
+                <constraint firstItem="dYk-cc-S1f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T0x-G8-Af0"/>
+                <constraint firstItem="dYk-cc-S1f" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aGH-9h-sNI"/>
                 <constraint firstItem="Xdv-Ge-n5a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nQ3-yi-Qd9"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
@@ -38,6 +45,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

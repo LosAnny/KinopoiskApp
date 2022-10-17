@@ -19,6 +19,7 @@
 		94EA284628FC748F00E22A86 /* PopularMoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA284528FC748F00E22A86 /* PopularMoviesModel.swift */; };
 		94EA284828FC750B00E22A86 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA284728FC750B00E22A86 /* Movie.swift */; };
 		94EA284A28FC763900E22A86 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA284928FC763900E22A86 /* NetworkError.swift */; };
+		94EA284D28FC84DB00E22A86 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA284C28FC84DB00E22A86 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		94EA284528FC748F00E22A86 /* PopularMoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesModel.swift; sourceTree = "<group>"; };
 		94EA284728FC750B00E22A86 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		94EA284928FC763900E22A86 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		94EA284C28FC84DB00E22A86 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				94EA282728FBDC9500E22A86 /* App */,
+				94EA284B28FC84C400E22A86 /* Templates */,
 				94EA283228FBE75A00E22A86 /* Networking */,
 				94EA282628FBDC9000E22A86 /* Scenes */,
 			);
@@ -132,8 +135,8 @@
 		94EA282A28FBDCC400E22A86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				94EA284528FC748F00E22A86 /* PopularMoviesModel.swift */,
 				94EA284728FC750B00E22A86 /* Movie.swift */,
+				94EA284528FC748F00E22A86 /* PopularMoviesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +166,14 @@
 				94EA283928FC0AE400E22A86 /* SearchViewModelProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94EA284B28FC84C400E22A86 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				94EA284C28FC84DB00E22A86 /* Observable.swift */,
+			);
+			path = Templates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +253,7 @@
 				94EA283728FC084100E22A86 /* SearchViewModel.swift in Sources */,
 				94EA283028FBE02100E22A86 /* SearchViewController.swift in Sources */,
 				94EA284028FC718D00E22A86 /* NetworkConstant.swift in Sources */,
+				94EA284D28FC84DB00E22A86 /* Observable.swift in Sources */,
 				94EA284A28FC763900E22A86 /* NetworkError.swift in Sources */,
 				94EA284828FC750B00E22A86 /* Movie.swift in Sources */,
 				94EA280F28FB505B00E22A86 /* AppDelegate.swift in Sources */,
