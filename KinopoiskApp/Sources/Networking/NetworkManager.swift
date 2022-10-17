@@ -36,7 +36,9 @@ class NetworkManager {
                 }
                 
                 do {
-                    let resultData = try JSONDecoder().decode(PopularMoviesModel.self, from: data)
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let resultData = try decoder.decode(PopularMoviesModel.self, from: data)
                     completionHandler(.success(resultData))
                 } catch {
                     completionHandler(.failure(.otherError))

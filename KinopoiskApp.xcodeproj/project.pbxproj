@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9418972128FD4269002B06DA /* SearchMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418971F28FD4269002B06DA /* SearchMovieCell.swift */; };
+		9418972228FD4269002B06DA /* SearchMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9418972028FD4269002B06DA /* SearchMovieCell.xib */; };
+		9418972528FD4C66002B06DA /* SearchTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418972428FD4C66002B06DA /* SearchTableCellViewModel.swift */; };
+		9418972828FD4E33002B06DA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9418972728FD4E33002B06DA /* SDWebImage */; };
+		9418972B28FD6666002B06DA /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418972A28FD6666002B06DA /* String+Extention.swift */; };
+		9418972F28FD6B19002B06DA /* SearchCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418972E28FD6B19002B06DA /* SearchCellViewModelProtocol.swift */; };
+		9418973128FD8BBE002B06DA /* SearchVC+TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418973028FD8BBE002B06DA /* SearchVC+TableViewExtensions.swift */; };
 		94EA280F28FB505B00E22A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA280E28FB505B00E22A86 /* AppDelegate.swift */; };
 		94EA281828FB505C00E22A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EA281728FB505C00E22A86 /* Assets.xcassets */; };
 		94EA281B28FB505C00E22A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EA281928FB505C00E22A86 /* LaunchScreen.storyboard */; };
@@ -23,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9418971F28FD4269002B06DA /* SearchMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieCell.swift; sourceTree = "<group>"; };
+		9418972028FD4269002B06DA /* SearchMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMovieCell.xib; sourceTree = "<group>"; };
+		9418972428FD4C66002B06DA /* SearchTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCellViewModel.swift; sourceTree = "<group>"; };
+		9418972A28FD6666002B06DA /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
+		9418972E28FD6B19002B06DA /* SearchCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		9418973028FD8BBE002B06DA /* SearchVC+TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+TableViewExtensions.swift"; sourceTree = "<group>"; };
 		94EA280B28FB505B00E22A86 /* KinopoiskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinopoiskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EA280E28FB505B00E22A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EA281728FB505C00E22A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,12 +58,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9418972828FD4E33002B06DA /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9418972328FD4270002B06DA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9418971F28FD4269002B06DA /* SearchMovieCell.swift */,
+				9418972028FD4269002B06DA /* SearchMovieCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9418972928FD664D002B06DA /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				9418972A28FD6666002B06DA /* String+Extention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		94EA280228FB505B00E22A86 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				94EA282728FBDC9500E22A86 /* App */,
+				9418972928FD664D002B06DA /* Extentions */,
 				94EA284B28FC84C400E22A86 /* Templates */,
 				94EA283228FBE75A00E22A86 /* Networking */,
 				94EA282628FBDC9000E22A86 /* Scenes */,
@@ -120,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				94EA283628FC084100E22A86 /* SearchViewModel.swift */,
+				9418972428FD4C66002B06DA /* SearchTableCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -155,7 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				94EA282E28FBE02100E22A86 /* SearchViewController.swift */,
+				9418973028FD8BBE002B06DA /* SearchVC+TableViewExtensions.swift */,
 				94EA282F28FBE02100E22A86 /* SearchViewController.xib */,
+				9418972328FD4270002B06DA /* Cells */,
 			);
 			path = SearchVC;
 			sourceTree = "<group>";
@@ -164,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				94EA283928FC0AE400E22A86 /* SearchViewModelProtocol.swift */,
+				9418972E28FD6B19002B06DA /* SearchCellViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -192,6 +228,9 @@
 			dependencies = (
 			);
 			name = KinopoiskApp;
+			packageProductDependencies = (
+				9418972728FD4E33002B06DA /* SDWebImage */,
+			);
 			productName = KinopoiskApp;
 			productReference = 94EA280B28FB505B00E22A86 /* KinopoiskApp.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 94EA280228FB505B00E22A86;
+			packageReferences = (
+				9418972628FD4E33002B06DA /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 94EA280C28FB505B00E22A86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +278,7 @@
 			files = (
 				94EA281B28FB505C00E22A86 /* LaunchScreen.storyboard in Resources */,
 				94EA281828FB505C00E22A86 /* Assets.xcassets in Resources */,
+				9418972228FD4269002B06DA /* SearchMovieCell.xib in Resources */,
 				94EA283128FBE02100E22A86 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,7 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9418972F28FD6B19002B06DA /* SearchCellViewModelProtocol.swift in Sources */,
+				9418972128FD4269002B06DA /* SearchMovieCell.swift in Sources */,
 				94EA284228FC733300E22A86 /* NetworkManager.swift in Sources */,
+				9418972B28FD6666002B06DA /* String+Extention.swift in Sources */,
+				9418973128FD8BBE002B06DA /* SearchVC+TableViewExtensions.swift in Sources */,
 				94EA284628FC748F00E22A86 /* PopularMoviesModel.swift in Sources */,
 				94EA283A28FC0AE400E22A86 /* SearchViewModelProtocol.swift in Sources */,
 				94EA283728FC084100E22A86 /* SearchViewModel.swift in Sources */,
@@ -257,6 +304,7 @@
 				94EA284A28FC763900E22A86 /* NetworkError.swift in Sources */,
 				94EA284828FC750B00E22A86 /* Movie.swift in Sources */,
 				94EA280F28FB505B00E22A86 /* AppDelegate.swift in Sources */,
+				9418972528FD4C66002B06DA /* SearchTableCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9418972628FD4E33002B06DA /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9418972728FD4E33002B06DA /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9418972628FD4E33002B06DA /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94EA280328FB505B00E22A86 /* Project object */;
 }

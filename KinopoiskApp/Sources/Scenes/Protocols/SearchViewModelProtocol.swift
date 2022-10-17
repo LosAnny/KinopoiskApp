@@ -9,7 +9,7 @@ import Foundation
 
 protocol SearchViewModelProtocol {
     var isLoading: Observable<Bool> { get set }
-    var cellDataSources: Observable<[Movie]> { get set }
+    var cellDataSources: Observable<[SearchCellViewModelProtocol]> { get set }
     
     func getNumberOfSections() -> Int
     func getNumberOfRows(in section: Int) -> Int

@@ -21,19 +21,4 @@ struct Movie: Codable {
     let voteCount: Int
     let name: String?
     let originalName, firstAirDate: String?
-
-    enum CodingKeys: String, CodingKey {
-        case backdropPath = "backdrop_path"
-        case id
-        case title
-        case originalTitle = "original_title"
-        case overview, popularity
-        case posterPath = "poster_path"
-        case releaseDate = "release_date"
-        case voteAverage = "vote_average"
-        case voteCount = "vote_count"
-        case name
-        case originalName = "original_name"
-        case firstAirDate = "first_air_date"
-    }
 }

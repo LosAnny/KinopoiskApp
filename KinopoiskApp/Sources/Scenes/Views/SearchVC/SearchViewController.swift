@@ -14,8 +14,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private var viewModel: SearchViewModelProtocol?
-    private var cellDataSources = [Movie]()
+    var viewModel: SearchViewModelProtocol?
+    var cellDataSources = [SearchCellViewModelProtocol]()
     
     // MARK: - Lifecycle
     
@@ -61,43 +61,5 @@ class SearchViewController: UIViewController {
             self.cellDataSources = movies
             self.reloadTableView()
         }
-    }
-}
-
-// MARK: - Extensions
-
-extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    private func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        self.tableView.backgroundColor = .systemBackground
-    }
-    
-    func reloadTableView() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel?.getNumberOfSections() ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
-        viewModel?.getNumberOfRows(in: section) ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView,
-                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let movie = cellDataSources[indexPath.row]
-        cell.textLabel?.text = self.viewModel?.getMovieTitle(movie)
-        
-        return cell
     }
 }

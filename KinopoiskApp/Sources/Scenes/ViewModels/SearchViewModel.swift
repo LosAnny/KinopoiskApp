@@ -11,7 +11,7 @@ class SearchViewModel: SearchViewModelProtocol {
     
     var isLoading = Observable(false)
     var dataSources: PopularMoviesModel?
-    var cellDataSources: Observable<[Movie]> = Observable(nil)
+    var cellDataSources: Observable<[SearchCellViewModelProtocol]> = Observable(nil)
     
     func getNumberOfSections() -> Int {
         return 1
@@ -32,7 +32,6 @@ class SearchViewModel: SearchViewModelProtocol {
             
             switch result {
             case .success(let data):
-                print("Count films \(data.results.count)")
                 self?.dataSources = data
                 self?.mapCellData()
             case .failure(let error):
@@ -42,7 +41,7 @@ class SearchViewModel: SearchViewModelProtocol {
     }
     
     func mapCellData() {
-        self.cellDataSources.value = self.dataSources?.results ?? []
+        self.cellDataSources.value = self.dataSources?.results.compactMap({SearchTableCellViewModel(movie: $0)})
     }
     
     func getMovieTitle(_ movie: Movie) -> String {
