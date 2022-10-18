@@ -47,4 +47,12 @@ class SearchViewModel: SearchViewModelProtocol {
     func getMovieTitle(_ movie: Movie) -> String {
         return movie.title ?? movie.name ?? ""
     }
+    
+    func getMovieWith(id: Int) -> Movie? {
+        
+        guard let movie = dataSources?.results.first(where: {$0.id == id}) else {
+            return nil
+        }
+        return movie
+    }
 }

@@ -22,6 +22,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="roB-qW-mjL">
                                 <rect key="frame" x="5" y="3" width="94" height="125"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="roB-qW-mjL" secondAttribute="height" multiplier="3:4" id="42C-BU-e8A"/>
                                 </constraints>
@@ -48,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-z1-7kx">
-                                <rect key="frame" x="244" y="97" width="44" height="31"/>
+                                <rect key="frame" x="244.5" y="97" width="43.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system">
                                     <color key="baseForegroundColor" systemColor="systemGrayColor"/>
@@ -94,6 +95,9 @@
     </objects>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

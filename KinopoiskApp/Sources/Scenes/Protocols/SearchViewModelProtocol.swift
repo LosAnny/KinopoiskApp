@@ -15,4 +15,5 @@ protocol SearchViewModelProtocol {
     func getNumberOfRows(in section: Int) -> Int
     func getData()
     func getMovieTitle(_ movie: Movie) -> String
+    func getMovieWith(id: Int) -> Movie?
 }
