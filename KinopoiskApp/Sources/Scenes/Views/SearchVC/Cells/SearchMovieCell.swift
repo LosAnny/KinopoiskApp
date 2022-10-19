@@ -42,5 +42,9 @@ class SearchMovieCell: UITableViewCell {
         self.dateLabel.text = viewModel.date
         self.score.text = viewModel.score
         self.movieImageView.sd_setImage(with: viewModel.image)
+        
+        if movieImageView.image == nil {
+            movieImageView.image = UIImage(systemName: "hand.raised.slash")
+        }
     }
 }

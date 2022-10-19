@@ -15,5 +15,4 @@ protocol SearchCellViewModelProtocol {
     var image: URL? { get }
     
     init(movie: Movie)
-    func makeImageURL(_ imageCode: String) -> URL?
 }
