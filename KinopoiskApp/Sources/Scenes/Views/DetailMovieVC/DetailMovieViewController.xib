@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailMovieViewController" customModule="KinopoiskApp" customModuleProvider="target">
+            <connections>
+                <outlet property="date" destination="3tf-Od-fV0" id="ggC-lN-0qQ"/>
+                <outlet property="descriptionLabel" destination="cmM-Ps-5oV" id="Fw4-il-4xe"/>
+                <outlet property="imageView" destination="vvy-x9-S2S" id="nfE-DZ-Qts"/>
+                <outlet property="scheduleButton" destination="nXu-VE-JS3" id="Idq-3l-DAF"/>
+                <outlet property="score" destination="UPY-hD-FQP" id="NhF-OD-1U0"/>
+                <outlet property="titleLabel" destination="Dvi-sD-PF4" id="uxk-cu-93G"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voteButton" destination="N6y-gD-yok" id="GBN-ZO-0fA"/>
+                <outlet property="voteCountLabel" destination="GJu-ch-Eah" id="MbY-ZZ-uZK"/>
+                <outlet property="voteLabel" destination="WwO-Wp-Noa" id="uLG-31-blE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nov-nj-3N2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vvy-x9-S2S">
+                            <rect key="frame" x="80" y="50" width="254" height="254"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="vvy-x9-S2S" secondAttribute="height" multiplier="1:1" id="boa-NT-8sZ"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-CE-X8F">
+                            <rect key="frame" x="0.0" y="304" width="414" height="546"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvi-sD-PF4">
+                                    <rect key="frame" x="15" y="30" width="384" height="30"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPY-hD-FQP">
+                                    <rect key="frame" x="15" y="70" width="384" height="17"/>
+                                    <color key="tintColor" red="0.27005094229999999" green="0.53444990920000002" blue="0.27542001620000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="textColor" red="0.27005094229999999" green="0.53444990920000002" blue="0.27542001620000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Год" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-Od-fV0">
+                                    <rect key="frame" x="15" y="89" width="384" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXu-VE-JS3">
+                                    <rect key="frame" x="70" y="121" width="274" height="55"/>
+                                    <color key="backgroundColor" red="1" green="0.36215092836056784" blue="0.10844170046956458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="55" id="3ma-9O-Wh7"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="ticket.fill" catalog="system" cornerStyle="capsule" titleAlignment="center">
+                                        <backgroundConfiguration key="background"/>
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Расписание и билеты">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmM-Ps-5oV">
+                                    <rect key="frame" x="15" y="287" width="384" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z0e-Il-sN3">
+                                    <rect key="frame" x="30" y="206" width="354" height="51"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKj-kR-KBQ">
+                                            <rect key="frame" x="0.0" y="5.5" width="88.5" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system" imagePlacement="top" imagePadding="7">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Оценить">
+                                                        <attributes>
+                                                            <font key="NSFont" size="11" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7J-wC-xJB">
+                                            <rect key="frame" x="88.5" y="6" width="88.5" height="39.5"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="bookmark.fill" catalog="system" imagePlacement="top" imagePadding="7">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Буду смотреть">
+                                                        <attributes>
+                                                            <font key="NSFont" size="11" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-ld-v5o">
+                                            <rect key="frame" x="177" y="5.5" width="88.5" height="40.5"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.fill" catalog="system" imagePlacement="top" imagePadding="7">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Поделиться">
+                                                        <attributes>
+                                                            <font key="NSFont" size="11" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTg-h9-pr0">
+                                            <rect key="frame" x="265.5" y="0.0" width="88.5" height="51"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system" imagePlacement="top" imagePadding="7">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Еще">
+                                                        <attributes>
+                                                            <font key="NSFont" size="11" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                                <stackView opaque="NO" clipsSubviews="YES" contentMode="center" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Uhl-yk-EUU">
+                                    <rect key="frame" x="15" y="338.5" width="384" height="177.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оценка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwO-Wp-Noa">
+                                            <rect key="frame" x="127.5" y="15" width="129.5" height="42"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                            <color key="textColor" red="0.27005094229999999" green="0.53444990920000002" blue="0.27542001620000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 оценок" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJu-ch-Eah">
+                                            <rect key="frame" x="156" y="72" width="72.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="N6y-gD-yok">
+                                            <rect key="frame" x="90" y="107.5" width="204" height="50"/>
+                                            <color key="backgroundColor" red="1" green="0.36215092840000002" blue="0.1084417005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Rf6-qP-qUL"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Оценить">
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="Xoz-dg-fRI"/>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <constraints>
+                                        <constraint firstItem="N6y-gD-yok" firstAttribute="leading" secondItem="Uhl-yk-EUU" secondAttribute="leading" constant="90" id="7O4-A9-T3z"/>
+                                        <constraint firstAttribute="trailing" secondItem="N6y-gD-yok" secondAttribute="trailing" constant="90" id="wlU-zJ-7m4"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="15" left="8" bottom="20" right="8"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Uhl-yk-EUU" firstAttribute="top" secondItem="cmM-Ps-5oV" secondAttribute="bottom" constant="30" id="27H-ho-PdM"/>
+                                <constraint firstItem="nXu-VE-JS3" firstAttribute="top" secondItem="3tf-Od-fV0" secondAttribute="bottom" constant="15" id="6Wb-DC-Fnu"/>
+                                <constraint firstItem="cmM-Ps-5oV" firstAttribute="leading" secondItem="RPc-CE-X8F" secondAttribute="leading" constant="15" id="BHy-Hl-qE0"/>
+                                <constraint firstItem="3tf-Od-fV0" firstAttribute="top" secondItem="UPY-hD-FQP" secondAttribute="bottom" constant="2" id="DiD-jS-rr1"/>
+                                <constraint firstAttribute="trailing" secondItem="Z0e-Il-sN3" secondAttribute="trailing" constant="30" id="Gs0-ic-QNM"/>
+                                <constraint firstItem="nXu-VE-JS3" firstAttribute="leading" secondItem="RPc-CE-X8F" secondAttribute="leading" constant="70" id="Iwk-gU-bse"/>
+                                <constraint firstItem="Z0e-Il-sN3" firstAttribute="top" secondItem="nXu-VE-JS3" secondAttribute="bottom" constant="30" id="Ovv-XO-d7u"/>
+                                <constraint firstItem="UPY-hD-FQP" firstAttribute="top" secondItem="Dvi-sD-PF4" secondAttribute="bottom" constant="10" id="PWX-FW-hfl"/>
+                                <constraint firstItem="cmM-Ps-5oV" firstAttribute="top" secondItem="Z0e-Il-sN3" secondAttribute="bottom" constant="30" id="Y7G-6T-kRK"/>
+                                <constraint firstItem="Uhl-yk-EUU" firstAttribute="leading" secondItem="RPc-CE-X8F" secondAttribute="leading" constant="15" id="agF-me-DeX"/>
+                                <constraint firstAttribute="trailing" secondItem="UPY-hD-FQP" secondAttribute="trailing" constant="15" id="c9C-C7-LZu"/>
+                                <constraint firstItem="UPY-hD-FQP" firstAttribute="leading" secondItem="RPc-CE-X8F" secondAttribute="leading" constant="15" id="cKA-T2-gO9"/>
+                                <constraint firstAttribute="trailing" secondItem="cmM-Ps-5oV" secondAttribute="trailing" constant="15" id="cVa-6O-zMV"/>
+                                <constraint firstItem="Z0e-Il-sN3" firstAttribute="leading" secondItem="RPc-CE-X8F" secondAttribute="leading" constant="30" id="cm3-2e-GLA"/>
+                                <constraint firstItem="3tf-Od-fV0" firstAttribute="leading" secondItem="RPc-CE-X8F" secondAttribute="leading" constant="15" id="hzg-JM-5DM"/>
+                                <constraint firstAttribute="trailing" secondItem="3tf-Od-fV0" secondAttribute="trailing" constant="15" id="if1-Dh-6vn"/>
+                                <constraint firstItem="Dvi-sD-PF4" firstAttribute="leading" secondItem="RPc-CE-X8F" secondAttribute="leading" constant="15" id="mjB-Wg-lN2"/>
+                                <constraint firstAttribute="bottom" secondItem="Uhl-yk-EUU" secondAttribute="bottom" constant="30" id="mql-KP-1Ha"/>
+                                <constraint firstItem="Dvi-sD-PF4" firstAttribute="top" secondItem="RPc-CE-X8F" secondAttribute="top" constant="30" id="oZ2-yl-JkI"/>
+                                <constraint firstAttribute="trailing" secondItem="Uhl-yk-EUU" secondAttribute="trailing" constant="15" id="pN3-3o-JP1"/>
+                                <constraint firstAttribute="trailing" secondItem="nXu-VE-JS3" secondAttribute="trailing" constant="70" id="sHo-aX-xzN"/>
+                                <constraint firstAttribute="trailing" secondItem="Dvi-sD-PF4" secondAttribute="trailing" constant="15" id="umL-3T-2kS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="vvy-x9-S2S" secondAttribute="trailing" constant="80" id="1tN-Vz-Rdo"/>
+                        <constraint firstItem="RPc-CE-X8F" firstAttribute="top" secondItem="vvy-x9-S2S" secondAttribute="bottom" id="2Oj-wU-fyN"/>
+                        <constraint firstItem="vvy-x9-S2S" firstAttribute="leading" secondItem="nov-nj-3N2" secondAttribute="leading" constant="80" id="Ieg-mq-bkF"/>
+                        <constraint firstItem="RPc-CE-X8F" firstAttribute="leading" secondItem="nov-nj-3N2" secondAttribute="leading" id="J3M-Z6-d6c"/>
+                        <constraint firstAttribute="trailing" secondItem="RPc-CE-X8F" secondAttribute="trailing" id="WUL-sn-2Ko"/>
+                        <constraint firstItem="RPc-CE-X8F" firstAttribute="width" secondItem="nov-nj-3N2" secondAttribute="width" id="diF-aJ-Eoj"/>
+                        <constraint firstAttribute="bottom" secondItem="RPc-CE-X8F" secondAttribute="bottom" id="ghr-bl-fTB"/>
+                        <constraint firstItem="vvy-x9-S2S" firstAttribute="top" secondItem="nov-nj-3N2" secondAttribute="top" constant="50" id="yqP-N5-dgp"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nov-nj-3N2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3Dy-AG-6mR"/>
+                <constraint firstItem="nov-nj-3N2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HLU-Sb-9VG"/>
+                <constraint firstAttribute="bottom" secondItem="nov-nj-3N2" secondAttribute="bottom" id="IxU-YR-I8y"/>
+                <constraint firstItem="nov-nj-3N2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="K0v-L0-Q9I"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="ticket.fill" catalog="system" width="128" height="84"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
