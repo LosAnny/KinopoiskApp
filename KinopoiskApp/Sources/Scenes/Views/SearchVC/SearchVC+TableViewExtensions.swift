@@ -31,10 +31,6 @@ extension SearchViewController {
 
 extension SearchViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        120
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel?.getNumberOfSections() ?? 0
     }
@@ -62,14 +58,34 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        120
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movieID = cellDataSources[indexPath.row].id
         
+        let movieID = cellDataSources[indexPath.row].id
         guard let movie = viewModel?.getMovieWith(id: movieID) else { return }
         
         let viewModel = DetailMovieViewModel(movie: movie)
         let viewController = DetailMovieViewController(viewModel: viewModel)
 
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        
+        let movieID = cellDataSources[indexPath.row].id
+        guard let movie = viewModel?.getMovieWith(id: movieID) else { return }
+        
+        let viewModel = MovieActionViewModel(movie: movie)
+        let viewController = MovieActionsViewController(viewModel: viewModel)
+        
+        if let sheet = viewController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+        }
+        
+        present(viewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
